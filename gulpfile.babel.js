@@ -114,6 +114,7 @@ gulp.task('default', [
     'clean',
 ], gulpCallback => {
     runSequence(
+        'test',
         'js',
         gulpCallback
     );
