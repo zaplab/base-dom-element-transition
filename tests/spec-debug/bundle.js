@@ -440,7 +440,7 @@
 	var _zapBaseJsString = __webpack_require__(5);
 
 	/**
-	 * @type {Element}
+	 * @type {HTMLDocument}
 	 */
 	var document = window.document;
 
@@ -557,7 +557,7 @@
 	 * @returns void
 	 */
 	function clear(element) {
-	    var firstChild = undefined;
+	    var firstChild = void 0;
 
 	    while (firstChild = element.firstChild) {
 	        // eslint-disable-line no-cond-assign
@@ -732,23 +732,23 @@
 	            } else {
 	                var eventsLength = events[eventName].length;
 
-	                for (var i = 0; i < eventsLength; ++i) {
-	                    element.removeEventListener(eventName, events[eventName][i], false);
+	                for (var _i = 0; _i < eventsLength; ++_i) {
+	                    element.removeEventListener(eventName, events[eventName][_i], false);
 	                }
 
 	                delete events[eventName];
 	            }
 	        }
 	    } else {
-	        for (var i in events) {
-	            if (events.hasOwnProperty(i)) {
-	                var eventsLength = events[i].length;
+	        for (var _i2 in events) {
+	            if (events.hasOwnProperty(_i2)) {
+	                var _eventsLength = events[_i2].length;
 
-	                for (var j = 0; j < eventsLength; ++j) {
-	                    element.removeEventListener(i, events[i][j], false);
+	                for (var j = 0; j < _eventsLength; ++j) {
+	                    element.removeEventListener(_i2, events[_i2][j], false);
 	                }
 
-	                delete events[i];
+	                delete events[_i2];
 	            }
 	        }
 	    }
@@ -817,7 +817,7 @@
 	function getSize(element) {
 	    var doc = document;
 	    var win = window;
-	    var size = undefined;
+	    var size = void 0;
 
 	    if (element === doc || element === win || element === doc.documentElement || element === doc.body) {
 	        var html = doc.documentElement;
@@ -843,7 +843,7 @@
 	 */
 	function getPosition(element, options) {
 	    var getBoundingClientRect = element.getBoundingClientRect();
-	    var relativePositions = undefined;
+	    var relativePositions = void 0;
 	    var relativeToElement = false;
 	    var ignoreBorder = false;
 	    var addBodyScroll = true;
@@ -920,7 +920,7 @@
 	function setStyles(element, styles) {
 	    var checkForVendorStyles = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
 
-	    var finalPropertyName = undefined;
+	    var finalPropertyName = void 0;
 
 	    for (var property in styles) {
 	        if (styles.hasOwnProperty(property)) {
@@ -1154,6 +1154,10 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
 	var _extends = Object.assign || function (target) {
 	    for (var i = 1; i < arguments.length; i++) {
 	        var source = arguments[i];for (var key in source) {
@@ -1173,10 +1177,6 @@
 	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
 	    };
 	}();
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
 
 	var _zapBaseJsObject = __webpack_require__(7);
 
@@ -1360,9 +1360,9 @@
 	                    }
 	                }
 	            } else {
-	                for (var type in events) {
-	                    if (events.hasOwnProperty(type)) {
-	                        this.removeEvent(type, events[type]);
+	                for (var _type in events) {
+	                    if (events.hasOwnProperty(_type)) {
+	                        this.removeEvent(_type, events[_type]);
 	                    }
 	                }
 	            }
@@ -1393,6 +1393,10 @@
 
 	"use strict";
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _extends = Object.assign || function (target) {
 	  for (var i = 1; i < arguments.length; i++) {
 	    var source = arguments[i];for (var key in source) {
@@ -1403,9 +1407,6 @@
 	  }return target;
 	};
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
 	exports.assign = assign;
 	exports.clone = clone;
 	exports.each = each;
