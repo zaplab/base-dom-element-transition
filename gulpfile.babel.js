@@ -2,13 +2,11 @@
 import del from 'del';
 import gulp from 'gulp';
 import babel from 'gulp-babel';
-import concat from 'gulp-concat';
 import eslint from 'gulp-eslint';
 import runSequence from 'run-sequence';
 import eventStream from 'event-stream';
 import gutil from 'gulp-util';
 import webpack from 'webpack';
-import path from 'path';
 
 gulp.task('clean', gulpCallback => {
     del([
